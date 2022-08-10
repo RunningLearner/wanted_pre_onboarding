@@ -40,3 +40,17 @@ wanted pre-onboarding backend course
   joppost_id: number,
 }
 ```
+
+# Git 컨벤션
+
+---
+
+## commit의 타입
+
+- FEATURE : 기능을 추가 또는 수정
+- ENV: 개발 환경을 추가 또는 수정 (config 변경, dockerfile 변경 등)
+- FIX : 버그를 해결
+- DOCS : 문서를 수정 (README.md 변경)
+- REFACTOR : 코드를 리팩토링, 디렉토리 구조 변경
+- TEST : 테스트 코드를 추가 또는 수정
+- CHORE: 단순오타, 주석추가
