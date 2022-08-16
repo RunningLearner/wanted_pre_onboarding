@@ -1,9 +1,8 @@
 import { Router } from 'express';
-var router = Router();
+import * as posts from './posts.routes.js';
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const router = Router();
+
+router.use(posts.path, posts.router);
 
 export default router;
