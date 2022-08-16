@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import * as posts from './posts.routes.js';
+import * as posts from './posts.js';
 
 const router = Router();
 
