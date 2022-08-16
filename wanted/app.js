@@ -1,15 +1,12 @@
 import createError from 'http-errors';
 import express, { json, urlencoded } from 'express';
 import logger from 'morgan';
-import {Sequelize} from 'sequelize';
-
 import router from './routes/index.js';
-
-const sequelize = new Sequelize('sqlite::memory:');
+import {sequelize} from './models/index.js';
 
 (async () => {
   try {
-    await sequelize.authenticate();
+    await sequelize.sync();
     console.log('Connection has been established successfully.');
   } catch (error) {
     console.error('Unable to connect to the database:', error);
