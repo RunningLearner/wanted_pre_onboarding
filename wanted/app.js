@@ -1,9 +1,21 @@
 import createError from 'http-errors';
 import express, { json, urlencoded } from 'express';
 import logger from 'morgan';
+import {Sequelize} from 'sequelize';
 
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
+
+const sequelize = new Sequelize('sqlite::memory:');
+
+(async () => {
+  try {
+    await sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
+})();
 
 var app = express();
 
