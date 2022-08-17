@@ -27,6 +27,7 @@ user.belongsToMany(post, {
   foreignKey: "user_id",
   otherKey: "post_id",
 });
+
 post.belongsToMany(user, {
   through: apply,
   foreignKey: "post_id",

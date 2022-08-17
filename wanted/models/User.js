@@ -16,6 +16,7 @@ export default (sequelize, DataTypes) => {
       sequelize,
       modelName: "User",
       tableName: "user",
+      timestamps: false
     }
   );
   return User;
