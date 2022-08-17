@@ -4,7 +4,9 @@ export default (sequelize, DataTypes) => {
   Post.init(
     {   
         post_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.UUID,
+            defaultValue: DataTypes.UUIDV4,
+            primaryKey: true,
         },
         company_id: {
             type: DataTypes.STRING,

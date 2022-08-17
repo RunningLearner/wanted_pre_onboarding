@@ -4,7 +4,8 @@ export default (sequelize, DataTypes) => {
   Company.init(
     {
         company_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.UUID,
+            defaultValue: DataTypes.UUIDV4,
             primaryKey: true,
         },
         companyname: {
